@@ -2,9 +2,9 @@
 
 F9::
 Toggle := !Toggle
-rsClientID = 725286
-Client2ID = 14160236
-ClientID3 = 6489384
+rsClientID = 
+Client2ID = 
+ClientID3 = 
 
 Send, , Started , ,
 loop

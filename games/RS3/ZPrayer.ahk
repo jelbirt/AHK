@@ -3,7 +3,7 @@
 
 F9::
 Toggle := !Toggle
-rsClientID = 524448
+rsClientID = 
 
 Send, , Started , ,
 loop
