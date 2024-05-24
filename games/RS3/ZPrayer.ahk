@@ -1,5 +1,6 @@
 ; @ ZPrayer - At START of cycle, attempt to consume another burial powder (0),
 ; then press No (2) assuming it was not consumed, and bury 25 times
+; TODO x/y coordinates need to be set
 
 F9::
 Toggle := !Toggle
@@ -24,7 +25,7 @@ loop
 
     sleep %shortR%
     ;WinActivate, ahk_id %rsClientID%
-    ControlClick, x972 y631, ahk_id %rsClientID%, , , NA
+    ControlClick, x1111 y1111, ahk_id %rsClientID%, , , NA
     sleep %shortR%
     ControlSend, , 2 , ahk_id %rsClientID%
     sleep %shortR%
