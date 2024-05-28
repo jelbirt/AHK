@@ -75,7 +75,7 @@ task:
 
 searchForWisp() {
     while(onWisp = 0) {
-        PixelSearch, Px, Py, 0, 0, A_ScreenWidth, A_ScreenHeight, 0x6605CA, 10, RGB, Fast
+        PixelSearch, Px, Py, 0, 0, A_ScreenWidth, A_ScreenHeight, 0x6605CA, 10, RGB, Fast   ; Search for the wisp here
             if (ErrorLevel) {
                 Send {Right down}
                 Sleep, % ran(320,590)
@@ -106,6 +106,7 @@ deposit() {
         if (Errorlevel) {
             PixelSearch, Kx, Ky, 0, 0, A_ScreenWidth, A_ScreenHeight, 0x67FCDF, 10, RGB, Fast
                 if (ErrorLevel) {
+                    ; Search for rift minimap icon
                     ImageSearch, Vx, Vy, 0, 0, 3000, 3000, *40 minimapicon.png
                         if (ErrorLevel) {
                             Send {Right down}
@@ -128,14 +129,13 @@ deposit() {
                             Sleep, % ran(25,50)
                             return
                         }
-
                 } else {
                     Sleep, %ran(501,1000)
                     Move(Kx-ran(1,5),Ky-ran(25,30),0)
                     Sleep, % ran(25,50)
                     Click, R
                     Sleep, % ran(25,50)
-                    ImageSearch, Wx, Wy, 0, 0, 3000, 3000, *40 deposit.png
+                    ImageSearch, Wx, Wy, 0, 0, 3000, 3000, *40 deposit.png      ; Search for deposit rift
                         if (ErrorLevel) {
                             return
                         } else {
@@ -157,7 +157,7 @@ deposit() {
             Sleep, % ran(25,50)
             Click, R
             Sleep, % ran(25,50)
-            ImageSearch, Jx, Jy, 0, 0, 3000, 3000, *40 deposit.png
+            ImageSearch, Jx, Jy, 0, 0, 3000, 3000, *40 deposit.png      ; Search for deposit rift - outer layer
                 if (ErrorLevel) {
                     Move(ran(1,1000), ran(1,1000), 2)
                     return
