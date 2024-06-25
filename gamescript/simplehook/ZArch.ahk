@@ -21,48 +21,49 @@ loop
 
     Random, , NewSeed
 
-    sleep %shortR%
+    Sleep, % ran(3104,5216)
     ; -- it 1
     ;WinActivate, ahk_id %rsClientID%
     ControlSend, , {Space} , ahk_id %rsClientID%
-    sleep %archR%
+    Sleep, % ran(125438,146402)
 
-    sleep %shortR%
+
+    Sleep, % ran(3104,5216)
     ; -- it 2
     ;WinActivate, ahk_id %rsClientID%
     ControlSend, , {Space} , ahk_id %rsClientID%
-    sleep %archR%
+    Sleep, % ran(125438,146402)
     
-    sleep %shortR%
+    Sleep, % ran(3104,5216)
     ; -- it 3
     ;WinActivate, ahk_id %rsClientID%
     ControlSend, , {Space} , ahk_id %rsClientID%
-    sleep %archR%
+    Sleep, % ran(125438,146402)
 
-    sleep %shortR%
+    Sleep, % ran(3104,5216)
     ; -- it 4
     ;WinActivate, ahk_id %rsClientID%
     ControlSend, , {Space} , ahk_id %rsClientID%
-    sleep %archR%
+    Sleep, % ran(125438,146402)
 
-    sleep %shortR%
+    Sleep, % ran(3104,5216)
     ; -- it 5
     ;WinActivate, ahk_id %rsClientID%
     ControlSend, , {Space} , ahk_id %rsClientID%
-    sleep %archR%
+    Sleep, % ran(125438,146402)
 
-    sleep %shortR%
+    Sleep, % ran(3104,5216)
     ;WinActivate, ahk_id %rsClientID%
     ControlSend, , {Space} , ahk_id %rsClientID%
-    sleep %archR%
+    Sleep, % ran(125438,146402)
 
-    sleep %shortR%
+    Sleep, % ran(3104,5216)
     ; -- it 7 -- sip
     ;WinActivate, ahk_id %rsClientID%
     ControlSend, , {Space} , ahk_id %rsClientID%
-    sleep %shortR%
+    Sleep, % ran(3104,5216)
     ControlSend, , 5 , ahk_id %rsClientID%
-    sleep %archR%
+    Sleep, % ran(125438,146402)
 
 
 } 
