@@ -12,13 +12,11 @@ loop
 
     Random, , NewSeed
 
-    ;Send, , Started , ,
 
     Random,miniR, 1040,3269
     Random,shortR, 3104,5216
     Random,invR, 44792,59186
 
-    Random, , NewSeed
 
     sleep %shortR%
     ;WinActivate, ahk_id %rsClientID%

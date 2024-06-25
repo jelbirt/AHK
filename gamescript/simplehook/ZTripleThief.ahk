@@ -14,13 +14,10 @@ loop
 
     Random, , NewSeed
 
-    ;Send, , Started , ,
-
     Random,miniR, 1040,3269
     Random,shortR, 3104,5216
     Random,thievR, 55207,71348 
 
-    Random, , NewSeed
 
     sleep %shortR%
     ; -- it 1

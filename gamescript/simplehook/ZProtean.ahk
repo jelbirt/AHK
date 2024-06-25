@@ -16,8 +16,7 @@ loop
     Random,miniR, 1040,3269
     Random,shortR, 3104,5216
     Random,proteanR, 165239,192063 
-
-    Random, , NewSeed
+    
 
     sleep %shortR%
     ; -- it 1

@@ -12,14 +12,12 @@ loop
 
     Random, , NewSeed
 
-    ;Send, , Started , ,
 
     Random,miniR, 1040,3269
     Random,shortR, 3104,5216
     Random,herbR, 12234,16430
     Random,fishR, 175438,192402 
 
-    Random, , NewSeed
 
     sleep %shortR%
     ; -- it 1
