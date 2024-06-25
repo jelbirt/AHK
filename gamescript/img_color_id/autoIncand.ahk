@@ -16,7 +16,7 @@ global timeout := 0
 global muspah := 1                      ; MUSPAH SETTING: 0 = no muspah, 1 = muspah use,   Muspah pouch bound to '5' key, Super restore bound to {4} (for resummon)
 SetTimer, Shutoff, 43200000             ; Default run timer - approx. 12 hours
 
-; Script start, assumes above setup steps/reqs are completed:
+; Script start, assumes above setup steps are completed
 F1::
     SetTimer, task , 1000
     if (muspah = 1) {
@@ -55,8 +55,8 @@ task:
             } else {
             }
     }
-    ImageSearch, Ax, Ay, 0, 0, 3000, 3000, *40 fullbackpack.png
-        if (ErrorLevel) {
+    ImageSearch, Ax, Ay, 0, 0, 3000, 3000, *40 fullbackpack.png         ; TODO : Need full bp img
+        if (ErrorLevel) { ; TODO : sort out ErrorLevel handling
         } else {
             needsDeposit = 1
         }
@@ -102,7 +102,7 @@ searchForWisp() {
 
 
 deposit() {
-    PixelSearch, 0x, 0y, A_ScreenWidth, A_ScreenHeight, 0xD6F395, 10, RGB, Fast
+    PixelSearch, Bx, By, A_ScreenWidth, A_ScreenHeight, 0xD6F395, 10, RGB, Fast
         if (Errorlevel) {
             PixelSearch, Kx, Ky, 0, 0, A_ScreenWidth, A_ScreenHeight, 0x67FCDF, 10, RGB, Fast
                 if (ErrorLevel) {
@@ -153,7 +153,7 @@ deposit() {
                         }
                 }
         } else {
-            Move2(Ox+ran(1,5),Oy+ran(25,50))
+            Move2(Bx+ran(1,5),By+ran(25,50))
             Sleep, % ran(25,50)
             Click, R
             Sleep, % ran(25,50)
